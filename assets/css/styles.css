@@ -1,0 +1,15 @@
+header {
+    height: 100px;
+}
+h1 {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+th {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 25px;
+}
+img {
+    width: 50px;
+}
