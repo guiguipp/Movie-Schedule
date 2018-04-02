@@ -9,10 +9,10 @@
   };
   firebase.initializeApp(config);
 
+  var midHour = 23;
+  var midMin = 59;
+
   const database = firebase.database();
-  var title;
-  var time;
-  var theater;
   
   $("#submit").on("click", function (e){
     e.preventDefault();    
@@ -40,15 +40,26 @@
     // storing the snapshot.val() in a variable for convenience
     var sv = snapshot.val();
 
-    // Console.loging the last user's data
     console.log(sv.title);
     console.log(sv.time);
     console.log(sv.theater);
 
+
+    // calculate difference
+    var now = moment()
+    var then = moment(sv.time,"H:mm A");
+    
+    // always show difference to next showing (not previous)
+    if (now.isAfter(then)) {
+        then.add(1, 'days');
+      }
+
+    var diff = then.from(now)
+    
     const tRow = $("<tr>");
     var nameTd = $("<td>").text(sv.title);
     var timeTd = $("<td>").text(sv.time);
-    var nextTd = $("<td>").text("tbd");
+    var nextTd = $("<td>").text(diff);
     var theaterTd = $("<td>").text(sv.theater);
 
     tRow.append(tRow, nameTd, timeTd,nextTd,theaterTd);
