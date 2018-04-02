@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/styles.css"/>
@@ -16,7 +18,63 @@
         </nav>
     </header>
     <main>
-        <p class="p-tag">This is our index file!</p>
+        <div class="container table">
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Movie Name</th>
+                        <th>Movie Time</th>
+                        <th>Next Showing</th>
+                        <th>Theater</th>
+                    </tr>
+                </thead>
+                <tbody id="movies-info-body">
+                    
+                </tbody>
+            </table>
+        </div>
+            
+
+
+
+
+
+
+
+        <div class="container form">
+            <div class="row">
+                <div class="col s6">
+                    <div class="row">
+                        <div class="col s6">
+                            <div class="input-field col s6">
+                                <input type="text" class="autocomplete" id="title">
+                                <label for="autocomplete-input">Movie title</label>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field col s6">
+                            <input type="text" id="time" class="timepicker">
+
+                            <label for="autocomplete-input">Time</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field col s6">
+                            <input type="text" id="theater" class="autocomplete">
+                            <label for="autocomplete-input">Theater</label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>  
     </main>
     <footer>
 
@@ -24,6 +82,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="assets/javascript/scheduler.js"> </script>
        
